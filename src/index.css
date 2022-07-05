@@ -20,16 +20,29 @@ html{
   box-sizing: inherit;
 }
 body{
- 
-  font-size: 18px;
+  font-size: 15px;
   margin: 0;
   font-family: var(--fuenteParrafos);
+}
+@media (min-width: 768px) {
+  body{
+ 
+    font-size: 18px;
+    margin: 0;
+    font-family: var(--fuenteParrafos);
+  }
 }
 
 /** Globales **/
 .contenedor{
-  max-width: 1275px;
+  max-width: 351px;
   margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .contenedor{
+    max-width: 1275px;
+    margin: 0 auto;
+  }
 }
 
 h1, h2, h3, h4, h5{
@@ -38,10 +51,11 @@ h1, h2, h3, h4, h5{
   margin: 0;
 }
 h1{
-  font-size: 150px;
+  font-size: 80px;
 }
 h2{
-  font-size: 100px;
+  font-size: 56px;
+  text-align: center;
 }
 h3{
   font-size: 56px;
@@ -50,15 +64,45 @@ h4{
   font-size: 32px;
 }
 h5{
-  font-size: 28px;
+  font-size: 16px;
   color: var(--grisAzul);
   font-family: var(--fuenteSecundaria);
   text-transform: uppercase;
   letter-spacing: 4.75px;
   font-weight: 300;
 }
+@media (min-width: 768px) {
+  h1{
+    font-size: 150px;
+  }
+  h2{
+    font-size: 100px;
+    text-align: left;
+  }
+  h3{
+    font-size: 56px;
+  }
+  h4{
+    font-size: 32px;
+  }
+  h5{
+    font-size: 28px;
+    color: var(--grisAzul);
+    font-family: var(--fuenteSecundaria);
+    text-transform: uppercase;
+    letter-spacing: 4.75px;
+    font-weight: 300;
+  }
+}
 p{
   color: var(--grisAzul);
+  text-align: center;
+}
+@media (min-width: 768px) {
+  p{
+    color: var(--grisAzul);
+    text-align: left;
+  }
 }
 .maximo{
   max-height: 630px;
@@ -72,20 +116,37 @@ p{
 /*Estilos de page Home Component*/
 
 .header-home {
-  background-image: url(../public/assets/home/background-home-desktop.jpg) ;
+  background-image: url(../public/assets/home/background-home-mobile.jpg) ;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  height: 900px;
+  height: 667px;
+}
+@media (min-width: 768px) {
+  .header-home {
+    background-image: url(../public/assets/home/background-home-desktop.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 900px;
+  }
 }
 .header-explore{
   background-color: var(--blanco);
-  height: 274px;
-  width: 274px;
+  height: 150px;
+  width: 150px;
   border-radius: 100%;
   font-family: var(--fuenteHeading);
-  font-size: 32px;
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  .header-explore{
+    height: 274px;
+    width: 274px;
+    font-size: 32px;
+  }
 }
 
 .enlace{
@@ -98,9 +159,26 @@ p{
 .efecto-glass{
   background-color: rgba(255,255,255,0.1);
   backdrop-filter: blur(20px);
+  width: 65%;
+  height: 667px;
+  padding: 0 5rem;
+ 
+}
+@media (min-width: 768px) {
+  .efecto-glass{
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    padding: 0;
+    height: 96px;
+  }
 }
 .mt-387{
-  margin-top: 387px;
+  margin-top: 112px;
+}
+@media (min-width: 768px) {
+  .mt-387{
+    margin-top: 387px;
+  }
 }
 .subHeading1{
   font-family: var(--fuenteHeading);
@@ -119,13 +197,24 @@ p{
 }
 
 /*Estilos de page Destination Component*/
+
 .header-destination{
-  background-image: url(../public/assets/destination/background-destination-desktop.jpg) ;
+  background-image: url(../public/assets/destination/background-destination-mobile.jpg) ;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 900px;
+  height: 850px;
   background-attachment: fixed;
+}
+@media (min-width: 768px) {
+  .header-destination{
+    background-image: url(../public/assets/destination/background-destination-desktop.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 900px;
+    background-attachment: fixed;
+  }
 }
 
 /*Estilos de page Crew Component*/
@@ -145,4 +234,12 @@ p{
   background-position: center center;
   height: 900px;
   background-attachment: fixed;
+}
+
+.modal-oculto{
+  position: absolute;
+  inset: 0;
+  z-index: 11;
+  width: 65%;
+  background-color: black;
 }
