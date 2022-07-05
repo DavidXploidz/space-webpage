@@ -9,24 +9,27 @@ const Crew = () => {
 
   return (
     <div className='header-crew'>
-      <div className='contenedor '>
-        <div className='contenedor flex items-center gap-x-5 text-4xl text-left '>
-          <p className='font-bold text-gray-600 mt-96'>02</p>
-          <span className='text-white uppercase tracking-widest mt-96'>meet your crew</span>
-        </div>
-      </div>
+
+      <div className='contenedor flex justify-center items-center gap-x-5 text-2xl text-center md:text-4xl md:text-left md:justify-start '>
+        <p className='font-bold text-gray-600 mt-24 md:mt-96'>02</p>
+        <span className='text-white uppercase tracking-widest mt-24 md:mt-96'>meet your crew</span>
+      </div>   
+ 
       {datos.crew.map((personas, index ) => {
           if(personas.name === valor){
           return (
         
-            <div className='contenedor grid grid-cols-2'>
-              <div>
-                <h4 className='text-gray-400 uppercase mt-56'>{personas.role}</h4>
-                <h3 className='uppercase'>{personas.name}</h3>
-                <p className='w-2/3'>
-                  {personas.bio}
-                </p>
-                <div className='contenedor flex gap-x-10 '>
+            <div className='contenedor flex flex-col-reverse md:grid md:grid-cols-2 '> {/**grid grid-cols-1 md:grid md:grid-cols-2 */}
+              <div className='flex flex-col-reverse md:block'>
+                <div>
+                  <h4 className=' text-gray-400 uppercase  md:mt-56'>{personas.role}</h4>
+                  <h3 className='uppercase'>{personas.name}</h3>
+                  <p className='md:w-2/3'>
+                    {personas.bio}
+                  </p>
+                </div>
+                
+                <div className='contenedor flex justify-center  gap-x-10 md:justify-start '>
                   {datos.crew.map ((boton, index) => (
                     <button 
                     onClick={e => {
@@ -34,13 +37,13 @@ const Crew = () => {
                       setValue(index)
                     }}
                     value={boton.name}
-                    className={`rounded-full h-5 w-5 mt-40 hover:bg-gray-400 ${index === value ? 'bg-white': 'bg-gray-600 '}`}>
+                    className={`rounded-full h-5 w-5 my-20 md:mt-40 hover:bg-gray-400 ${index === value ? 'bg-white': 'bg-gray-600 '}`}>
 
                     </button>
                   ))}
                 </div>
               </div>
-              <img src={personas.images.webp} alt={`Imagen de crew`}  className='grid self-end place-self-center maximo'/>
+              <img src={personas.images.webp} alt={`Imagen de crew`}  className='h-96 md:h-auto grid self-center md:self-end place-self-center maximo mt-5 md:mt-0'/>
               {}
             </div>
             )

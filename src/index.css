@@ -58,18 +58,21 @@ h2{
   text-align: center;
 }
 h3{
-  font-size: 56px;
+  font-size: 24px;
+  text-align: center;
 }
 h4{
-  font-size: 32px;
+  font-size: 16px;
+  text-align: center;
 }
 h5{
-  font-size: 16px;
+  font-size: 14px;
   color: var(--grisAzul);
   font-family: var(--fuenteSecundaria);
   text-transform: uppercase;
-  letter-spacing: 4.75px;
+  letter-spacing: 2.36px;
   font-weight: 300;
+  text-align: center;
 }
 @media (min-width: 768px) {
   h1{
@@ -81,9 +84,11 @@ h5{
   }
   h3{
     font-size: 56px;
+    text-align: left;
   }
   h4{
     font-size: 32px;
+    text-align: left;
   }
   h5{
     font-size: 28px;
@@ -92,6 +97,7 @@ h5{
     text-transform: uppercase;
     letter-spacing: 4.75px;
     font-weight: 300;
+    text-align: left;
   }
 }
 p{
@@ -109,8 +115,14 @@ p{
   max-width: 712px;
 }
 .cohetes-img{
-  width: 515px;
-  height: 527px;
+  width: 100%;
+  height: 170px;
+}
+@media (min-width: 768px) {
+  .cohetes-img{
+    width: 515px;
+    height: 527px;
+  }
 }
 
 /*Estilos de page Home Component*/
@@ -219,27 +231,39 @@ p{
 
 /*Estilos de page Crew Component*/
 .header-crew{
-  background-image: url(../public/assets/crew/background-crew-desktop.jpg) ;
+  background-image: url(../public/assets/crew/background-crew-mobile.jpg) ;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 900px;
+  height: 710px;
   background-attachment: fixed;
+}
+@media (min-width: 768px) {
+  .header-crew{
+    background-image: url(../public/assets/crew/background-crew-desktop.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 900px;
+    background-attachment: fixed;
+  }
 }
 
 .header-technology{
-  background-image: url(../public/assets/technology/background-technology-desktop.jpg) ;
+  background-image: url(../public/assets/technology/background-technology-mobile.jpg) ;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 900px;
+  height: 710px;
   background-attachment: fixed;
 }
-
-.modal-oculto{
-  position: absolute;
-  inset: 0;
-  z-index: 11;
-  width: 65%;
-  background-color: black;
+@media (min-width: 768px) {
+  .header-technology{
+    background-image: url(../public/assets/technology/background-technology-desktop.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 900px;
+    background-attachment: fixed;
+  }
 }
