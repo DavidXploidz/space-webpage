@@ -1,0 +1,148 @@
+:root{
+  --fuenteHeading : 'Bellefair', serif;
+  --fuenteParrafos: 'Barlow', sans-serif;
+  --fuenteSecundaria: 'Barlow Condensed', sans-serif;
+  /*Colores*/
+  --azul : #0B0D17;
+  --grisAzul: #D0D6F9;
+  --blanco : #FFFFFF; 
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+ 
+  font-size: 18px;
+  margin: 0;
+  font-family: var(--fuenteParrafos);
+}
+
+/** Globales **/
+.contenedor{
+  max-width: 1275px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5{
+  color: var(--blanco);
+  font-family: var(--fuenteHeading);
+  margin: 0;
+}
+h1{
+  font-size: 150px;
+}
+h2{
+  font-size: 100px;
+}
+h3{
+  font-size: 56px;
+}
+h4{
+  font-size: 32px;
+}
+h5{
+  font-size: 28px;
+  color: var(--grisAzul);
+  font-family: var(--fuenteSecundaria);
+  text-transform: uppercase;
+  letter-spacing: 4.75px;
+  font-weight: 300;
+}
+p{
+  color: var(--grisAzul);
+}
+.maximo{
+  max-height: 630px;
+  max-width: 712px;
+}
+.cohetes-img{
+  width: 515px;
+  height: 527px;
+}
+
+/*Estilos de page Home Component*/
+
+.header-home {
+  background-image: url(../public/assets/home/background-home-desktop.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 900px;
+}
+.header-explore{
+  background-color: var(--blanco);
+  height: 274px;
+  width: 274px;
+  border-radius: 100%;
+  font-family: var(--fuenteHeading);
+  font-size: 32px;
+}
+
+.enlace{
+  font-family: var(--fuenteSecundaria);
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  color: var(--blanco);
+  text-transform: uppercase;
+}
+.efecto-glass{
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(20px);
+}
+.mt-387{
+  margin-top: 387px;
+}
+.subHeading1{
+  font-family: var(--fuenteHeading);
+  font-weight: 400 ;
+  text-transform: uppercase;
+  font-size: 28px;
+  color: var(--blanco);
+}
+.subHeading2{
+  font-family: var(--fuenteSecundaria);
+  font-weight: 400 ;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 2.35px;
+  color: var(--grisAzul);
+}
+
+/*Estilos de page Destination Component*/
+.header-destination{
+  background-image: url(../public/assets/destination/background-destination-desktop.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 900px;
+  background-attachment: fixed;
+}
+
+/*Estilos de page Crew Component*/
+.header-crew{
+  background-image: url(../public/assets/crew/background-crew-desktop.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 900px;
+  background-attachment: fixed;
+}
+
+.header-technology{
+  background-image: url(../public/assets/technology/background-technology-desktop.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 900px;
+  background-attachment: fixed;
+}
