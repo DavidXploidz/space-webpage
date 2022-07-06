@@ -24,9 +24,9 @@ const Technology = () => {
                     {datos.technology.map((boton, index) => (
                       <button 
                       value={boton.name}
-                      onClick={e => {setValor(e.target.value), setValue(index)}} 
+                      onClick={e => {setValor(boton.name), setValue(index)}} 
                       className={`p-4 rounded-full w-20 h-20 flex ${index === value ? 'bg-white' : 'border rounded-full p-5'}`}>
-                      <p className={`mx-auto cursor-not-allowed ${index === value ? 'text-Azul' : 'text-white'}`}>{index + 1}</p>
+                      <p className={`mx-auto  ${index === value ? 'text-Azul' : 'text-white'}`}>{index + 1}</p>
                       </button>
                     ))}
 

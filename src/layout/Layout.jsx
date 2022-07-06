@@ -12,19 +12,20 @@ const Layout = () => {
   const [mostrarMenu, setMostrarMenu] = useState(false)
 
   const desplegarMenu = () => {
-    console.log('muestra el menu');
     setMostrarMenu(!mostrarMenu)
   }
 
   return (
-    <main>
+    <main className=''>
         <div className='absolute z-10 flex items-start md:items-center justify-between w-full   md:mt-14'>
             <div className='ml-14'>
                 <img src={logo} alt="Logo of page" />
             </div>
             
             {mostrarMenu ? (
+           
               <div className='efecto-glass' >
+              {document.body.classList.add('noMover')}
                 <AiOutlineClose size={50} className="text-white ml-56 md:hidden " onClick={desplegarMenu} />
                 <nav className='flex flex-col mt-40'>
                   <span className={`enlace font-bold ${urlActual === '/' ? 'border-b-2 ' : ''} `}>00 <Link to="/" className='font-normal'>Home </Link></span>
@@ -34,8 +35,13 @@ const Layout = () => {
                 </nav>
 
               </div>
+              
             ):(
+              <>
+              {document.body.classList.remove('nomover')}
               <GiHamburgerMenu  size={50} className="text-white md:hidden" onClick={desplegarMenu}/>
+         
+              </>
             )}
             
 

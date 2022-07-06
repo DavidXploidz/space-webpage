@@ -98,6 +98,7 @@ h5{
     letter-spacing: 4.75px;
     font-weight: 300;
     text-align: left;
+    
   }
 }
 p{
@@ -266,4 +267,7 @@ p{
     height: 900px;
     background-attachment: fixed;
   }
+}
+.nomover{
+  overflow: hidden;
 }
